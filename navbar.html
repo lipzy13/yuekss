@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function showMore(){
+            if(document.getElementById("navbar-tambahan").style.display == "flex"){
+                document.getElementById("navbar-tambahan").style.display = "none";
+                document.getElementById("about").style.textDecoration = "none";
+            } else {
+
+                document.getElementById("navbar-tambahan").style.display = "flex";
+                document.getElementById("about").style.textDecoration = "underline";
+                document.getElementById("about").style.textDecorationColor = "#FFFFFF";
+                document.getElementById("about").style.textDecorationThickness = "2px";
+                document.getElementById("about").style.textUnderlineOffset = "auto";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="navbar">
+        <div class="bg-[#10AE52] flex flex-row justify-between py-[28px] pl-[25px] pr-[50px]">
+            <div class="logo kiri"> 
+                <img src="img/image 1.png" alt="logo jurusan" width="125" height="65">
+            </div>
+            <div class="my-auto text-white font-medium space-x-12 text-sm">
+                <a href="#" >
+                    HOME
+                </a>
+                <a href="#" onclick="showMore()" id="about">
+                    ABOUT
+                </a>
+                <a href="#">
+                    CONTACT
+                </a>
+            </div>
+            <div class="columns-2 mt-3">
+                <img src="img/indonesia 1.png" alt="indonesia" width="20" >
+                <img src="img/uk 1.png" alt="inggris" width="20">
+            </div>
+        </div>
+
+        <div class="flex flex-row space-x-10 px-64  py-10 bg-[#D9D9D9]" id="navbar-tambahan" style="display: none;">
+            <a href="#" class="font-bold">Profil</a>
+            <a href="#" class="font-bold">Staff</a>
+            <a href="#" class="font-bold">Berita</a>
+            <a href="#" class="font-bold">Akademik</a>
+            <div>
+                <a class="font-bold">Lab</a>
+                <ul class="opacity-50 mt-6">
+                    <li><a href="#">Lab Robotika dan Sistem Tertanam</a></li>
+                    <li><a href="#">Lab Komputer dan Jaringan</a></li>
+                    <li><a href="#">Lab Sinyal dan Sistem</a></li>
+                    <li><a href="#">Lab Digital dan Arsitektur Kompute</a></li>
+                </ul>
+            </div>
+            <div>
+                <a class="font-bold">Jurnal</a>
+                <ul class="opacity-50 mt-6">
+                    <li><a href="#">Jurnal JITCE</a></li>
+                    <li><a href="#">Jurnal Chipset</a></li>
+                </ul>
+            </div>
+            <div>
+                <a class="font-bold">Tracer Study</a>
+                <ul class="opacity-50 mt-6">
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Pengguna Alumni</a></li>
+                </ul>
+            </div>
+            <a href="#" class="font-bold">Dokumen</a>
+        </div>
+    </div>
+
+
+</body>
+</html>
